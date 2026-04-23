@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 align="center">Survey Form</h2>
+
+<form>
+    <!-- User Name -->
+    <label>User Name:</label>
+    <input type="text" name="username" required>
+
+    <!-- Feedback -->
+    <label>Feedback:</label>
+    <textarea name="feedback" rows="4" cols="30" required></textarea>
+
+    <!-- Rating -->
+    <label>Rating (1–5):</label>
+    <input type="radio" name="rating" value="1"> 1
+    <input type="radio" name="rating" value="2"> 2
+    <input type="radio" name="rating" value="3"> 3
+    <input type="radio" name="rating" value="4"> 4
+    <input type="radio" name="rating" value="5"> 5
+
+    <!-- Favorite Technology -->
+    <label>Favorite Technology:</label>
+    <select name="technology">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>Java</option>
+    </select>
+
+    <!-- Subscribe -->
+    <label>
+        <input type="checkbox" name="subscribe"> Subscribe to newsletter
+    </label>
+
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
