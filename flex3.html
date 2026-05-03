@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 2;
+        }
+
+        ol {
+            background-color: purple;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            list-style: none;
+            flex-wrap: wrap-reverse;
+
+
+        }
+
+        li {
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 2px black;
+            color: rgb(20 20 20);
+            background-color: blue;
+            padding: 10px 20px;
+            border-radius: 8px;
+            flex-grow: 1;
+            margin: 10px 30px;
+            text-align: center;
+        }
+
+        video {
+            width: 100vw;
+            height: 500px;
+        }
+
+        #electronic-devices {
+            padding-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            bottom: 100px;
+            backdrop-filter: blur(10px);
+            background-image: linear-gradient(transparent, gray, rgb(43, 40, 40));
+
+        }
+
+        #electronic-devices-section {
+            position: relative;
+            bottom: 0px;
+            left: 40px;
+            z-index: 1;
+            font-size: 40px;
+            font-style: italic;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #electronic-devices-section:hover {
+            text-decoration: underline;
+            text-shadow: 2px 2px 2px aliceblue;
+            color: rgb(150, 53, 53);
+            cursor: pointer;
+            transform: scaleY(1.5);
+        }
+
+        #electronic-devices>div {
+            height: 450px;
+            width: 350px;
+            border: 5px solid green;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 20px;
+            padding: 10px 20px;
+            background-color: rgb(79, 79, 134);
+
+        }
+
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 500px;
+            backdrop-filter: blur(10px);
+            text-shadow: 4px 4px 4px aliceblue;
+            padding: 10px 30px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px black;
+          
+        }
+
+        h1:hover{
+              animation-name: scaling;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        #product-card img {
+            height: 250px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        #product-card img:hover {
+            transform: skew(10deg);
+            box-shadow: 2px 2px 8px aliceblue;
+
+        }
+
+        .product-info h4 {
+            font-size: 20px;
+        }
+
+        .product-info h4,
+        p {
+            color: aliceblue;
+            margin-left: 25px;
+            font-style: italic;
+
+        }
+
+        .btn-container {
+            padding: 10px 20px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 8px;
+            border: none;
+            margin: 0px 20px;
+            font-style: italic;
+            font-size: 19px;
+        }
+
+        .btn-container>button:first-child {
+            background-color: #00ff00;
+
+        }
+
+        .btn-container>button:last-child {
+            background-color: #e70d40;
+        }
+
+        aside{
+            position: fixed;
+            top:40%;
+            border: 2px solid black;
+            padding: 25px 10px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            z-index: 1;
+            margin-left: 10px;
+            border-radius: 50px;
+            height: 250px;
+            background-image: radial-gradient(transparent, black);
+
+
+
+        }
+        aside img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        aside img:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 2px black;
+            transform: translate(10px);
+        }
+        @keyframes scaling{
+            0%{
+                transform:scale(0);
+            }
+            25%{
+                transform:rotate(0deg);
+            }
+            70%{
+                transform:rotate(360deg);
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+    </Style>
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTENT</li>
+            <li>HELP</li>
+            <li>LOGIN</li>
+        </ol>
+    </nav>
+    <main>
+        <section id="background-video">
+
+            <video src="https://cdn.pixabay.com/video/2024/02/06/199558-910609536_medium.mp4?download"></video>
+        </section>
+        <section>
+            <h1>Welcome to Alpha Mart</h1>
+        </section>
+        <h2 id="electronic-devices-section">Electronic Devices :</h2>
+        <section id="electronic-devices">
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYT07Cb7G2F9fm8dOhlaYYBvUSbFDoCPIWw&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Laptop</h4>
+                    <h4>Cost:50000</h4>
+                    <h4>Ratings:4.5/5</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eum repellendus vel eaque
+                        perspiciatis dolor, ullam sunt sequi soluta natus. Excepturi assumenda asperiores vero aut
+                        molestias fuga! Impedit, quo facere!
+                    </p>
+
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYT07Cb7G2F9fm8dOhlaYYBvUSbFDoCPIWw&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Laptop</h4>
+                    <h4>Cost:50000</h4>
+                    <h4>Ratings:4.5/5</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eum repellendus vel eaque
+                        perspiciatis dolor, ullam sunt sequi soluta natus. Excepturi assumenda asperiores vero aut
+                        molestias fuga! Impedit, quo facere!
+                    </p>
+
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYT07Cb7G2F9fm8dOhlaYYBvUSbFDoCPIWw&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Laptop</h4>
+                    <h4>Cost:50000</h4>
+                    <h4>Ratings:4.5/5</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eum repellendus vel eaque
+                        perspiciatis dolor, ullam sunt sequi soluta natus. Excepturi assumenda asperiores vero aut
+                        molestias fuga! Impedit, quo facere!
+                    </p>
+
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYT07Cb7G2F9fm8dOhlaYYBvUSbFDoCPIWw&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Laptop</h4>
+                    <h4>Cost:50000</h4>
+                    <h4>Ratings:4.5/5</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eum repellendus vel eaque
+                        perspiciatis dolor, ullam sunt sequi soluta natus. Excepturi assumenda asperiores vero aut
+                        molestias fuga! Impedit, quo facere!
+                    </p>
+
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYT07Cb7G2F9fm8dOhlaYYBvUSbFDoCPIWw&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Laptop</h4>
+                    <h4>Cost:50000</h4>
+                    <h4>Ratings:4.5/5</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eum repellendus vel eaque
+                        perspiciatis dolor, ullam sunt sequi soluta natus. Excepturi assumenda asperiores vero aut
+                        molestias fuga! Impedit, quo facere!
+                    </p>
+
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div id="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYT07Cb7G2F9fm8dOhlaYYBvUSbFDoCPIWw&s"
+                    alt="">
+                <div class="product-info">
+                    <h4>Name:Laptop</h4>
+                    <h4>Cost:50000</h4>
+                    <h4>Ratings:4.5/5</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint eum repellendus vel eaque
+                        perspiciatis dolor, ullam sunt sequi soluta natus. Excepturi assumenda asperiores vero aut
+                        molestias fuga! Impedit, quo facere!
+                    </p>
+
+                </div>
+                <div class="btn-container">
+                    <button>Buy</button>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <aside>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/042/148/649/small/youtube-logo-youtube-social-media-icon-free-png.png"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png?_=20140125013055"
+                    alt="">
+                <img src="https://img.freepik.com/premium-vector/vinnytsia-ukraine-april-29-2023-popular-social-media-logo-twitter-icon-vector-design-realistic-editorial-sign_545793-1694.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="">
+                <img
+                    src="https://img.freepik.com/premium-vector/green-square-social-media-logo_197792-2919.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>
